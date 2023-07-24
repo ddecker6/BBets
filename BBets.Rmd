@@ -141,5 +141,5 @@ In this question we used the numClass to find out what amount of students gets u
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
 
 
-
+In conclusion, We found having around 28 students helps keep his profits to center on zero. Browlow is constantly making profit, or in some cases losing money. 
 
