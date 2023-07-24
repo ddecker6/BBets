@@ -86,15 +86,31 @@ for(i in 1:40) {
 favstats(sorted_brownlow)
 ```
 
-Their average earnings are around 281.23. The 95% confidence interval is two standard deviations above the mean or below the mean. In this case, the below the mean is 223, and the above is 339.This is because two standard deviations adds up to ~58. The standard deviation for the problem is 28.97991, which rounds up to 29. We used favstats to find these numbers. 
+Their average earnings are around 281.42. The 95% confidence interval is two standard deviations above the mean or below the mean. In this case, the below the mean is 223, and the above is 339.This is because two standard deviations adds up to ~58. The standard deviation for the problem is 28.97991, which rounds up to 29. We used favstats to find these numbers. 
 
 # What are the fair odds? Use manipulation of odds in the function to tune Brownlows earnings to zero. 
 
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
+```{r}
+b_low <-array(100)
+for(i in 1:100) {
+  b_low[i] <- BrLw(odds=4.37)
+}
+```
 
+```{r}
+sorted_b_low <- sort(b_low)
+plot(sorted_brownlow, type = "l", xlab = "Index", ylab = "Value",
+     main = "Line Plot of Brownlow Numerical Vector")
+```
 
+```{r}
+favstats(sorted_b_low)
+```
+
+By plugging in numbers, and floundering around with the function, I was able to get the mean as close as I could to 0. The current mean with the odds being 4.37 makes it 1.0309. We confirmed that the odds were between 4 and 4.5, In this case the standard deviation is 49.53692. Which can round up to 50. The confidence interval is two standard deviations above or below the mean, so once again, in this case above the mean would be around 51, and below would be -49.
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
