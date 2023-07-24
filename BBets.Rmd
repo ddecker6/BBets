@@ -117,13 +117,29 @@ By plugging in numbers, and floundering around with the function, I was able to 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
 
+```{r}
+fairlow <- array (40)
+for(i in 1:40){
+  fairlow[i] <- BrLw(numClass = 28)
+}
+```
 
+```{r}
+sorted_fairlow<-sort(fairlow)
+plot(sorted_fairlow, type = "l", xlab = "Index", ylab = "Value",
+     main = "Line Plot of Brownlow Numerical Vector")
+```
 
+```{r}
+favstats(sorted_fairlow)
+```
 
-
-
+In this question we used the numClass to find out what amount of students gets us as close as we can to zero. We continued tuning our results to either find zero, or get close to zero. In this case, we obviously can't use a decimal because we cannot have half of a person. The number of students we concluded for this question was 28. 
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+
+
+
 
